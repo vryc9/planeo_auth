@@ -1,0 +1,14 @@
+services:
+  planeo-auth-db:
+    image: mysql:8.0
+    container_name: planeo-auth-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: planeo_auth
+    ports:
+      - "3307:3306"
+    volumes:
+      - planeo_auth_data:/var/lib/mysql
+
+volumes:
+  planeo_auth_data:
