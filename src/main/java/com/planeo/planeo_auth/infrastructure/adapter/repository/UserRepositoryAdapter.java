@@ -24,4 +24,9 @@ public class UserRepositoryAdapter implements UserRepository {
     public User save(User user) {
         return repository.save(user);
     }
+
+    @Override
+    public void delete(User user) {
+        repository.delete(user);
+    }
 }
